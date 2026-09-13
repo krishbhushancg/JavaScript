@@ -1,2 +1,2 @@
 # JavaScript
-Javascript assignments
+All JavaScript assignments of Coding Gita !
