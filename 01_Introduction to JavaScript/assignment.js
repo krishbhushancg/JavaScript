@@ -1,0 +1,12 @@
+let value = 25;
+console.log(typeof value);
+
+value = "JavaScript";
+console.log(typeof value);
+
+value = false;
+console.log(typeof value);
+
+alert("Welcome to JavaScript!");
+console.log("This message appears in the browser console");
+
