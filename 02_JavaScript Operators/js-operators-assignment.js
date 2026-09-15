@@ -252,8 +252,8 @@ console.log(`water left: ${totalQuantity}`);
 
 //2.
 let totalMoney=500;
-let MoneySpend=180;
-totalMoney-=MoneySpend;
+let moneySpend=180;
+totalMoney-=moneySpend;
 console.log(`remaining  money: ${totalMoney}`);
 
 //3.
