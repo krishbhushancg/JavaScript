@@ -379,8 +379,8 @@ console.log(`area: ${area}`);
 
 //2.
 let edge=4;
-let areaOfCube=6*(edge**2);
-console.log(`area:${areaOfCube}`);
+let volumeOfCube=(edge**3);
+console.log(`volume:${volumeOfCube}`);
 
 //3.
 let imageSizeFactor=3;
