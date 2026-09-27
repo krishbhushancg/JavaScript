@@ -598,3 +598,507 @@ let classLimit = 40;
 
 console.log(classStudents <= classLimit);
 
+
+//Part-D
+//Logical operators
+
+// 1.Logical And &
+
+// Question 1
+let username1 = "admin";
+let password1 = 1234;
+console.log(username1 === "admin" && password1 === 1234); // true
+
+// Question 2
+let isLoggedIn2 = true;
+let hasPermission2 = true;
+console.log(isLoggedIn2 && hasPermission2); // true
+
+// Question 3
+let inStock3 = true;
+let price3 = 800;
+console.log(inStock3 && price3 < 1000); // true
+
+// Question 4
+let marks4 = 75;
+let attendance4 = 80;
+console.log(marks4 > 65 && attendance4 > 70); // true
+
+// Question 5
+let isWeekend5 = true;
+let isHoliday5 = false;
+console.log(isWeekend5 && isHoliday5); // false
+
+// Question 6
+let a6 = 0;
+let b6 = 10;
+let result6 = a6 && b6;
+console.log(result6); // 0
+
+// Question 7
+let x7 = 5;
+let y7 = 10;
+let result7 = (x7 > 3 && y7) || 0;
+console.log(result7); // 10
+
+// Question 8
+let p8 = "Hello";
+let q8 = "";
+let r8 = "World";
+let result8 = p8 && q8 && r8;
+console.log(result8); // ""
+
+// Question 9
+let val9 = 5;
+let condition9 = val9 && (val9 = 0);
+console.log(condition9); // 0
+console.log(val9); // 0
+
+// Question 10
+let x10 = 10;
+let y10 = 20;
+let result10 = (x10 && y10) && (x10 > y10);
+console.log(result10); // false
+
+
+
+//2. Logical OR
+
+// Question 1
+let passwordCorrect1 = true;
+let otpValid1 = false;
+console.log(passwordCorrect1 || otpValid1); // true
+
+// Question 2
+let isMember2 = false;
+let hasCoupon2 = true;
+console.log(isMember2 || hasCoupon2); // true
+
+// Question 3
+let age3 = 16;
+let height3 = 155;
+console.log(age3 > 18 || height3 > 150); // true
+
+// Question 4
+let emailGiven4 = true;
+let phoneGiven4 = false;
+console.log(emailGiven4 || phoneGiven4); // true
+
+// Question 5
+let score5 = 900;
+let timeBonus5 = true;
+console.log(score5 > 1000 || timeBonus5); // true
+
+// Question 6
+let a6or = 0, b6or = false, c6or = "", d6or = null, e6or = 42;
+console.log(a6or || b6or || c6or || d6or || e6or); // 42
+
+// Question 7
+let x7or = "Hello" || 0;
+let y7or = 0 || "Hi";
+console.log(x7or, y7or); // Hello Hi
+
+// Question 8
+let a8or = 10, b8or = 20;
+console.log((a8or < 5) || (b8or > 15)); // true
+
+// Question 9
+let val9or = 5;
+let condition9or = val9or || (val9or = 0);
+console.log(condition9or); // 5
+console.log(val9or); // 5
+
+// Question 10
+console.log("" || 0 || false || null || undefined || "OK"); // OK
+
+
+//3. Logical NOT
+
+// Question 1
+let isBanned1 = false;
+console.log(!isBanned1); // true
+
+// Question 2
+let isCompleted2 = false;
+console.log(!isCompleted2); // true
+
+// Question 3
+let isOn3 = true;
+console.log(!isOn3); // false
+
+// Question 4
+let isActive4 = false;
+console.log(!isActive4); // true
+
+// Question 5
+let isReadOnly5 = false;
+console.log(!isReadOnly5); // true
+
+// Question 6
+let a6not = 0, b6not = 1;
+console.log(!a6not, !b6not); // true false
+
+// Question 7
+let x7not = "Hello", y7not = "";
+console.log(!x7not, !y7not); // false true
+
+// Question 8
+let val8not = 5;
+console.log(!val8not); // false
+
+// Question 9
+let a9not = 10, b9not = 20;
+console.log(!(a9not && b9not)); // false
+
+// Question 10
+let x10not = 0, y10not = 1;
+console.log(!(x10not || y10not)); // false
+
+
+// 4. Mixed Logical Operators
+// Question 1
+let isMember1m = true, isBanned1m = false;
+console.log(isMember1m && !isBanned1m); // true
+
+// Question 2
+let isStudent2m = true, isSenior2m = false, isBanned2m = true;
+console.log((isStudent2m || isSenior2m) && !isBanned2m); // false
+
+// Question 3
+let nameGiven3m = true, emailGiven3m = false, phoneGiven3m = true;
+console.log(nameGiven3m && (emailGiven3m || phoneGiven3m)); // true
+
+// Question 4
+let isAdmin4m = true, hasToken4m = false, isSuspended4m = false;
+console.log((isAdmin4m || hasToken4m) && !isSuspended4m); // true
+
+// Question 5
+let score5m = 1200, timeBonus5m = false, extraLife5m = true;
+console.log(score5m > 1000 && (timeBonus5m || extraLife5m)); // true
+
+// Question 6
+let a6m = 0, b6m = 10, c6m = 20;
+console.log(a6m || b6m && c6m); // 20
+
+// Question 7
+let p7m = true, q7m = false, r7m = true;
+console.log(p7m && q7m || r7m); // true
+
+// Question 8
+let x8m = 10, y8m = 20;
+console.log(!(x8m && y8m) || (x8m > 5 && y8m < 30) && true); // true
+
+// Question 9
+let a9m = 5, b9m = 0, c9m = 10;
+console.log(a9m && b9m || c9m); // 10
+
+// Question 10
+let val1_10m = false, val2_10m = true, val3_10m = false;
+console.log(!(val1_10m || val2_10m) && val3_10m || true); // true
+
+
+//Part-E
+
+// Part a — Question 1
+let counter1 = 5;
+counter1++;
+console.log(counter1); // 6
+
+// Part a — Question 2
+let lives2 = 3;
+lives2--;
+console.log(lives2); // 2
+
+// Part a — Question 3
+let score3e = 10;
+score3e++;
+console.log(score3e); // 11
+
+// Part a — Question 4
+let items4 = 8;
+items4--;
+console.log(items4); // 7
+
+// Part a — Question 5
+let count5 = 0;
+count5++;
+count5++;
+console.log(count5); // 2
+
+// Part b — Question 6
+let x6e = 5;
+let y6e = x6e++;
+console.log(x6e, y6e); // 6 5
+// x++ returns the old value, then increments x.
+
+// Part b — Question 7
+let a7e = 5;
+let b7e = ++a7e;
+console.log(a7e, b7e); // 6 6
+// ++a increments first, then returns the new value.
+
+// Part b — Question 8
+let lives8e = 3;
+let previousLives8e = lives8e--;
+console.log(lives8e, previousLives8e); // 2 3
+
+// Part b — Question 9
+let attempts9e = 0;
+let currentAttempts9e = ++attempts9e;
+console.log(attempts9e, currentAttempts9e); // 1 1
+
+// Part b — Question 10
+let points10e = 100;
+points10e++;
+points10e--;
+console.log(points10e); // 100
+
+// Part c — Question 11
+let x11e = 10;
+let y11e = x11e++;
+let z11e = ++x11e;
+console.log(x11e, y11e, z11e); // 12 10 12
+
+// Part c — Question 12
+let a12e = 5;
+let b12e = a12e-- + ++a12e;
+console.log(a12e, b12e); // 5 10
+
+// Part c — Question 13
+let m13e = 7;
+let n13e = --m13e + m13e++;
+console.log(m13e, n13e); // 7 13
+
+// Part c — Question 14
+let p14e = 3;
+let q14e = p14e++ + ++p14e + p14e;
+console.log(p14e, q14e); // 5 13
+
+// Part c — Question 15
+let val15e = 0;
+val15e = val15e++ + ++val15e;
+console.log(val15e); // 1
+
+//Part-F
+//Type of operator
+
+// Part a — Question 1
+let name1f = "Rahul";
+console.log(typeof name1f); // string
+
+// Part a — Question 2
+let age2f = 25;
+console.log(typeof age2f); // number
+
+// Part a — Question 3
+let isStudent3f = true;
+console.log(typeof isStudent3f); // boolean
+
+// Part a — Question 4
+let city4f;
+console.log(typeof city4f); // undefined
+
+// Part a — Question 5
+console.log(typeof null); // object (JavaScript historical behavior)
+
+// Part b — Question 6
+console.log(typeof 42); // number
+console.log(typeof "Hello"); // string
+console.log(typeof true); // boolean
+console.log(typeof undefined); // undefined
+
+// Part b — Question 7
+console.log(typeof null); // object
+console.log(typeof {}); // object
+console.log(typeof []); // object
+
+// Part b — Question 8
+console.log(typeof NaN); // number
+console.log(typeof Infinity); // number
+console.log(typeof function(){}); // function
+
+// Part b — Question 9
+let price9f = 99.99;
+let message9f = "Welcome";
+let isActive9f = false;
+console.log("price:", typeof price9f); // number
+console.log("message:", typeof message9f); // string
+console.log("isActive:", typeof isActive9f); // boolean
+
+// Part b — Question 10
+let value10f = null;
+console.log(typeof value10f); // object
+console.log(typeof value10f === "object"); // true
+
+// Part c — Question 11
+console.log(typeof typeof 100); // string
+console.log(typeof typeof "Hi"); // string
+console.log(typeof typeof true); // string
+
+// Part c — Question 12
+let a12f = 10, b12f = "10";
+console.log(typeof a12f === typeof b12f); // false
+console.log(typeof a12f == typeof b12f); // false
+
+// Part c — Question 13
+console.log(typeof null === "object"); // true
+console.log(typeof [] === "object"); // true
+console.log(typeof {} === "object"); // true
+
+// Part c — Question 14
+let x14f;
+console.log(typeof x14f); // undefined
+x14f = null;
+console.log(typeof x14f); // object
+x14f = 0;
+console.log(typeof x14f); // number
+
+// Part c — Question 15
+console.log(typeof NaN === "number"); // true
+console.log(typeof Infinity === "number"); // true
+console.log(typeof (1 / 0)); // number
+
+//Part-G type coercion
+// Part a — Question 1
+let number1g = Number("25");
+console.log(number1g + 10); // 35
+
+// Part a — Question 2
+let number2g = 100;
+console.log(String(number2g) + " rupees"); // 100 rupees
+
+// Part a — Question 3
+console.log(Boolean(0)); // false
+
+// Part a — Question 4
+console.log(Boolean("Hello")); // true
+
+// Part a — Question 5
+console.log(+"50" * 2); // 100
+
+// Part b — Question 6
+console.log("10" - 5); // 5
+console.log("10" + 5); // "105"
+console.log("10" * 2); // 20
+console.log("10" / 2); // 5
+
+// Part b — Question 7
+console.log("5" - "2"); // 3
+console.log("5" + "2"); // "52"
+console.log("5" * "2"); // 10
+console.log("5" / "2"); // 2.5
+
+// Part b — Question 8
+console.log(Number("123")); // 123
+console.log(Number("123abc")); // NaN
+console.log(Number(true)); // 1
+console.log(Number(false)); // 0
+console.log(Number(null)); // 0
+console.log(Number(undefined)); // NaN
+
+// Part b — Question 9
+console.log(Boolean(0)); // false
+console.log(Boolean("")); // false
+console.log(Boolean("0")); // true
+console.log(Boolean([])); // true
+console.log(Boolean({})); // true
+console.log(Boolean(null)); // false
+
+// Part b — Question 10
+console.log(String(100)); // "100"
+console.log(String(true)); // "true"
+console.log(String(null)); // "null"
+console.log(String(undefined)); // "undefined"
+console.log(100 + ""); // "100"
+
+// Part c — Question 11
+console.log("5" + 3 + 2); // "532"
+console.log(5 + 3 + "2"); // "82"
+console.log("5" - 3 + 2); // 4
+console.log(5 - "3" + "2"); // "22"
+
+// Part c — Question 12
+console.log(true + true); // 2
+console.log(true + false); // 1
+console.log(true + "false"); // "truefalse"
+console.log(false + "true"); // "falsetrue"
+
+// Part c — Question 13
+console.log(null + 5); // 5
+console.log(undefined + 5); // NaN
+console.log(null + "5"); // "null5"
+console.log(undefined + "5"); // "undefined5"
+
+// Part c — Question 14
+console.log([] + []); // ""
+console.log([] + {}); // "[object Object]"
+console.log({} + []); // "[object Object]"
+console.log({} + {}); // "[object Object][object Object]"
+
+// Part c — Question 15
+let a15g = "10";
+let b15g = 5;
+let c15g = a15g + b15g;
+let d15g = a15g - b15g;
+let e15g = +a15g + b15g;
+console.log(c15g, typeof c15g); // 105 string
+console.log(d15g, typeof d15g); // 5 number
+console.log(e15g, typeof e15g); // 15 number
+
+// Part c — Question 16
+console.log(!!"Hello"); // true
+console.log(!!""); // false
+console.log(!!0); // false
+console.log(!!1); // true
+console.log(!!null); // false
+console.log(!!undefined); // false
+
+// Part c — Question 17
+console.log(Number("")); // 0
+console.log(Number(" ")); // 0
+console.log(Number("0")); // 0
+console.log(Number(" 25 ")); // 25
+console.log(Number("25px")); // NaN
+
+// Part c — Question 18
+let val1_18 = "5";
+let val2_18 = 2;
+console.log(val1_18 + val2_18); // "52"
+console.log(+val1_18 + val2_18); // 7
+console.log(val1_18 - val2_18); // 3
+console.log(val1_18 * val2_18); // 10
+console.log(val1_18 / val2_18); // 2.5
+
+
+// BONUS MIXED PRACTICE
+
+// Question 19
+let count19 = 5;
+console.log(typeof count19++); // number
+console.log(count19); // 6
+console.log(typeof ++count19); // number
+console.log(count19); // 7
+
+// Question 20
+let x20 = "10";
+let y20 = ++x20;
+console.log(x20, y20, typeof x20, typeof y20); // 11 11 number number
+
+// Question 21
+let a21 = "5";
+let b21 = a21++;
+console.log(a21, b21, typeof a21, typeof b21); // 6 5 number string
+
+// Question 22
+console.log(typeof (1 + "2")); // string
+console.log(typeof (1 - "2")); // number
+console.log(typeof (1 * "2")); // number
+console.log(typeof (1 / "2")); // number
+
+// Question 23
+let val23 = null;
+console.log(typeof val23); // object
+console.log(val23 + 1); // 1
+console.log(val23 - 1); // -1
+console.log(val23 * 1); // 0
+console.log(Boolean(val23)); // false
