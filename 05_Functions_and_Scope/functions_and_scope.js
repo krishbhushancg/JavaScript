@@ -131,3 +131,200 @@ function report(name,marks){
 
 console.log(report("krish",99))
 console.log(report("harsh",98))
+
+
+//q11
+// a) Difference between local scope and global scope
+// - Local scope: A variable declared inside a function can be accessed only inside that function.
+// - Global scope: A variable declared outside a function can be accessed inside and outside functions.
+
+//b.)
+let course = "JavaScript";
+
+function displayAge() {
+    let age = 20;
+    console.log("Age:", age);
+}
+
+function displayCourse() {
+    console.log("Course:", course);
+}
+
+displayAge();
+displayCourse();
+
+console.log(age);
+
+//q12
+function analyzeStudent(name, m1, m2, m3) {
+    let total = m1 + m2 + m3;
+    let average = total / 3;
+
+    return `${name} scored total ${total} with average ${average}`;
+}
+
+console.log(analyzeStudent("Rahul", 80, 75, 90));
+console.log(analyzeStudent("Priya", 60, 70, 85));
+
+//q13
+//a.)
+// a) What is a nested function?
+// A nested function is a function defined inside another function. The inner function can be called from within the outer function.
+
+//b.)
+function studentReport(name, m1, m2, m3) {
+    function total() {
+        return m1 + m2 + m3;
+    }
+
+    return `${name} total marks: ${total()}`;
+}
+
+console.log(studentReport("Rahul", 80, 75, 90));
+
+
+//q14
+function generateReport(name, m1, m2, m3) {
+    let total = m1 + m2 + m3;
+    let average = total / 3;
+    let result = average >= 40 ? "Pass" : "Fail";
+
+    return `Student Name: ${name}
+Total Marks: ${total}
+Average: ${average.toFixed(2)}
+Result: ${result}`;
+}
+
+console.log(generateReport("Rahul", 80, 75, 90));
+console.log(generateReport("Priya", 30, 45, 35));
+
+
+//q15
+function sumOfThree(a, b, c) {
+    return a + b + c;
+}
+
+function averageOfTwo(x, y) {
+    return (x + y) / 2;
+}
+
+function maxOfTwo(a, b) {
+    if (a > b) {
+        return a;
+    } else {
+        return b;
+    }
+}
+
+function fullName(first, last) {
+    return first + " " + last;
+}
+
+console.log(sumOfThree(10, 20, 30));
+console.log(averageOfTwo(10, 20));
+console.log(maxOfTwo(15, 25));
+console.log(fullName("Rahul", "Sharma"));
+
+
+//q16
+const calculateGrade = function(percentage) {
+    if (percentage >= 90) {
+        return "A+";
+    } else if (percentage >= 80) {
+        return "A";
+    } else if (percentage >= 70) {
+        return "B";
+    } else if (percentage >= 60) {
+        return "C";
+    } else if (percentage >= 40) {
+        return "D";
+    } else {
+        return "F";
+    }
+};
+
+console.log(calculateGrade(95));
+console.log(calculateGrade(82));
+console.log(calculateGrade(67));
+console.log(calculateGrade(45));
+console.log(calculateGrade(32));
+
+
+//q17
+function calculateFinalPrice(price, discountPercent) {
+    let finalPrice = price - (price * discountPercent / 100);
+    return finalPrice;
+}
+
+console.log(calculateFinalPrice(2500, 15));
+console.log(calculateFinalPrice(1200, 10));
+
+//q18
+const celsiusToFahrenheit = function(c) {
+    return (c * 9 / 5) + 32;
+};
+
+const fahrenheitToCelsius = function(f) {
+    return (f - 32) * 5 / 9;
+};
+
+console.log(celsiusToFahrenheit(0));
+console.log(celsiusToFahrenheit(25));
+
+console.log(fahrenheitToCelsius(32));
+console.log(fahrenheitToCelsius(98.6));
+
+
+//q19
+// a) Can a function expression be called before it is defined?
+// No, not when using a const or let variable to store the function. The variable must be initialized before it is called.
+
+sayHello();
+
+const sayHello = function() {
+    console.log("Hello");
+};
+
+//b.)
+function calculateSquareAndDouble(num) {
+    function square() {
+        return num * num;
+    }
+
+    return square() * 2;
+}
+
+console.log(calculateSquareAndDouble(5));
+
+//q20
+function processStudent(name, m1, m2, m3) {
+    function calculateTotal() {
+        return m1 + m2 + m3;
+    }
+
+    let total = calculateTotal();
+    let average = total / 3;
+    let result = average >= 40 ? "Pass" : "Fail";
+
+    return `Student: ${name}
+Total: ${total}
+Average: ${average.toFixed(2)}
+Result: ${result}`;
+}
+
+function compareAverages(avg1, avg2) {
+    if (avg1 > avg2) {
+        return "First average is higher";
+    } else if (avg2 > avg1) {
+        return "Second average is higher";
+    } else {
+        return "Both averages are equal";
+    }
+}
+
+console.log(processStudent("Rahul", 80, 75, 90));
+console.log(processStudent("Priya", 60, 70, 85));
+console.log(processStudent("Amit", 30, 35, 40));
+
+console.log(compareAverages(81.67, 71.67));
+console.log(compareAverages(70, 70));
