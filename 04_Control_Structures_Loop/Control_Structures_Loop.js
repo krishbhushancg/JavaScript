@@ -190,9 +190,6 @@ for (let i=0; i<=arr4.length-1; i++){
 //q5
 for (let i=1; i<=50; i++){
     console.log(i)
-    if((i**(1/2))%1===0 && i>20){
-        break;
-    }
 }
 
 
